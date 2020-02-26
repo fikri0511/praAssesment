@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/utama">
+    <fragment
+        android:id="@+id/utama"
+        android:name="org.d3if1071.praasses.Utama"
+        android:label="fragment_utama">
+        <action
+            android:id="@+id/action_utama_to_persegiPanjang"
+            app:destination="@id/persegiPanjang" />
+        <action
+            android:id="@+id/action_utama_to_segitiga"
+            app:destination="@id/segitiga" />
+        <action
+            android:id="@+id/action_utama_to_about"
+            app:destination="@id/about" />
+    </fragment>
+    <fragment
+        android:id="@+id/persegiPanjang"
+        android:name="org.d3if1071.praasses.PersegiPanjang"
+        android:label="fragment_persegi_panjang"
+        tools:layout="@layout/fragment_persegi_panjang" />
+    <fragment
+        android:id="@+id/segitiga"
+        android:name="org.d3if1071.praasses.Segitiga"
+        android:label="fragment_segitiga"
+        tools:layout="@layout/fragment_segitiga" />
+    <fragment
+        android:id="@+id/about"
+        android:name="org.d3if1071.praasses.About"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_about_to_utama"
+            app:destination="@id/utama" />
+    </fragment>
+</navigation>
